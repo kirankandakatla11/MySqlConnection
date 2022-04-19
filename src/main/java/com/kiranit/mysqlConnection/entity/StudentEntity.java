@@ -14,20 +14,19 @@ import java.io.Serializable;
 @Setter
 @Data
 public class StudentEntity {
+
     @Id
-    @GeneratedValue(generator = "increment")
-    @GenericGenerator(name="increment", strategy="increment")
-    @Column(name="id")
-    int id;
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    private int id;
     @Column
-    String firstName;
+    private String firstName;
     @Column
-    String lastName;
+    private String lastName;
     @Column
-    String marks;
+    private String marks;
     @Column
-    String branch;
+    private String branch;
     @Column
-    String address;
+    private String address;
 
 }

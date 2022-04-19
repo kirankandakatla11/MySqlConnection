@@ -43,4 +43,21 @@ public class StudentServiceImpl implements StudentService {
         }
         return studentList;
     }
+    public Student getId(Integer id){
+        Student student=new Student();
+        StudentEntity studentEntity= studentDao.getId(id);
+        student.setId(studentEntity.getId());
+        student.setFirstName(studentEntity.getFirstName());
+        student.setLastName(studentEntity.getLastName());
+        student.setMarks(studentEntity.getMarks());
+        student.setBranch(studentEntity.getBranch());
+        student.setAddress(studentEntity.getAddress());
+
+        return student;
+    }
+    public String deleteStudent(Integer id){
+        studentDao.deleteStudent(id);
+        return "delete success";
+
+    }
 }

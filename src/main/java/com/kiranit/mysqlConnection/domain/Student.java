@@ -10,11 +10,11 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Student {
-    int id;
-    String firstName;
-    String lastName;
-    String marks;
-    String branch;
-    String address;
+   private int id;
+   private String firstName;
+   private String lastName;
+   private String marks;
+   private String branch;
+   private String address;
 
 }
